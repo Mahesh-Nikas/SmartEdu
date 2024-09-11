@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Study Material for Engineers</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .department-content .subjects {
+            display: none;
+        }
+        .menu-items {
+            display: none;
+        }
+        .menu-items.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="menu-items">
+                <a href="#about">About Us</a><br>
+                <a href="#rate">Rate Us</a><br>
+                <a href="#share">Share with Friends</a><br>
+                <input type="text" placeholder="Search..." id="search">
+                <div class="share-options">
+                    <a href="#" onclick="shareOnWhatsApp()">Share on WhatsApp</a><br>
+                    <a href="#" onclick="shareByEmail()">Share via Email</a><br>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Free Study Material for Engineers</h1>
+            <br>
+            <div class="departments">
+                <h2>Departments</h2>
+                <div class="department-box">
+                    <button onclick="showDepartment('applied-science')">Applied Science</button>
+                    <button onclick="showDepartment('computer-science')">Computer Science Engineering</button>
+                    <button onclick="showDepartment('information-technology')">Information Technology</button>
+                    <button onclick="showDepartment('electrical-engineering')">Electrical Engineering</button>
+                    <button onclick="showDepartment('civil-engineering')">Civil Engineering</button>
+                    <button onclick="showDepartment('mechanical-engineering')">Mechanical Engineering</button>
+                </div>
+            </div>
+            <div class="department-sections">
+                <!-- Information Technology Section -->
+                <section id="information-technology" class="department-content">
+                    <label>Information Technology Department</label>
+                    <div class="year-selector">
+                        <h3>Select a Year</h3>
+                        <button onclick="showSubjects('it-2nd-year')">2nd Year</button>
+                        <button onclick="showSubjects('it-3rd-year')">3rd Year</button>
+                        <button onclick="showSubjects('it-4th-year')">4th Year</button>
+                    </div>
+                    <div id="subjects-it-2nd-year" class="subjects">
+                        <h3>2nd Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('it-2nd-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="it-2nd-year-subject" style="display:none;">
+                                <button>OOP's</button><br>
+                               <fieldset> <button onclick="downloadFile('it-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('it-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>DSA</button><br>
+                                <fieldset> <button onclick="downloadFile('it-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('it-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                             <button>Operating System</button><br>
+                             <fieldset><button onclick="downloadFile('it-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('it-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>Analog and Digital Electronics</button><br>
+                            <fieldset> <button onclick="downloadFile('it-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('it-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subjects-it-3rd-year" class="subjects">
+                        <h3>3rd Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('it-3rd-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="it-3rd-year-subject" style="display:none;">
+                                <button>database-management System</button><br>
+                                <fieldset><button onclick="downloadFile('it-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('it-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                             <button>Theory of Computation</button><br>
+                             <fieldset> <button onclick="downloadFile('it-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('it-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            <button>Data structure and statistics</button><br>
+                            <fieldset> </fieldset><button onclick="downloadFile('it-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('it-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>Software Engineering</button><br>
+                            <fieldset> <button onclick="downloadFile('it-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('it-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subjects-it-4th-year" class="subjects">
+                        <h3>4th Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('it-4th-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="it-4th-year-subject" style="display:none;">
+                                <button>abc</button><br>
+                                <fieldset> </fieldset><button onclick="downloadFile('it-4thyear-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('it-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>efg</button><br>
+                                <fieldset> <button onclick="downloadFile('it-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('it-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                             <button>ijk</button><br>
+                             <fieldset> <button onclick="downloadFile('it-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('it-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>pqr</button><br>
+                            <fieldset> <button onclick="downloadFile('it-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('it-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Computer Science Engineering Section -->
+                <section id="computer-science" class="department-content">
+                    <label>Computer Science Engineering Department</label>
+                    <div class="year-selector">
+                        <h3>Select a Year</h3>
+                        <button onclick="showSubjects('cse-2nd-year')">2nd Year</button>
+                        <button onclick="showSubjects('cse-3rd-year')">3rd Year</button>
+                        <button onclick="showSubjects('cse-4th-year')">4th Year</button>
+                    </div>
+                    <div id="subjects-cse-2nd-year" class="subjects">
+                        <h3>2nd Year Subjects</h3>
+                        <div class="subject">
+                    <div id="subjects-cse-2nd-year" class="subjects">
+                            <button onclick="showDetails('cse-2nd-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="cse-2nd-year-subject" style="display:none;">
+                                <button>DSA</button><br>
+                                <fieldset>  <button onclick="downloadFile('cse-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('cse-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>Theory of Computation</button><br>
+                                <fieldset>   <button onclick="downloadFile('cse-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('cse-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            <button>AI</button><br>
+                            <fieldset> <button onclick="downloadFile('cse-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('cse-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>Operating System</button><br>
+                            <fieldset> <button onclick="downloadFile('cse-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('cse-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subjects-cse-3rd-year" class="subjects">
+                        <h3>3rd Year Subjects</h3>
+                        <div class="subject">
+                            <div id="subjects-cse-3rd-year" class="subjects"></div>
+                            <button onclick="showDetails('cse-3rd-year-subject')">Show Subject Details</button>
+                             <div class="subject-details" id="cse-3rd-year-subject" style="display:none;">
+                                <button>database-management System</button><br>
+                                <fieldset><button onclick="downloadFile('cse-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('cse-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>Compiler Designer</button><br>
+                                <fieldset> <button onclick="downloadFile('cse-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('cse-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                             <button>COA</button><br>
+                             <fieldset> <button onclick="downloadFile('cse-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('cse-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>DSS</button><br>
+                             <fieldset> <button onclick="downloadFile('cse-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('cse-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subjects-cse-4th-year" class="subjects">
+                        <h3>4th Year Subjects</h3>
+                       <div class="subject">
+                            <button onclick="showDetails('cse-4th-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="cse-4th-year-subject" style="display:none;">
+                                <button>abc</button><br>
+                                <fieldset> <button onclick="downloadFile('cse-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('cse-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>pqr</button><br>
+                                <fieldset>  <button onclick="downloadFile('cse-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('cse-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            <button>klm</button><br>
+                            <fieldset> <button onclick="downloadFile('cse-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('cse-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>ijk</button><br>
+                            <fieldset> <button onclick="downloadFile('cse-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('cse-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Electrical Engineering Section -->
+                <section id="electrical-engineering" class="department-content">
+                    <label>Electrical Engineering Department</label>
+                    <div class="year-selector">
+                        <h3>Select a Year</h3>
+                        <button onclick="showSubjects('ee-2nd-year')">2nd Year</button>
+                        <button onclick="showSubjects('ee-3rd-year')">3rd Year</button>
+                        <button onclick="showSubjects('ee-4th-year')">4th Year</button>
+                    </div>
+                    <div id="subjects-ee-2nd-year" class="subjects">
+                        <h3>2nd Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('ee-2nd-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="ee-2nd-year-subject" style="display:none;">
+                                <button onclick="downloadFile('ee-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('ee-2nd-year-subject-study-material.pdf')">Study Material</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subjects-ee-3rd-year" class="subjects">
+                        <h3>3rd Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('ee-3rd-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="ee-3rd-year-subject" style="display:none;">
+                                <button onclick="downloadFile('ee-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('ee-3rd-year-subject-study-material.pdf')">Study Material</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subjects-ee-4th-year" class="subjects">
+                        <h3>4th Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('ee-4th-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="ee-4th-year-subject" style="display:none;">
+                                <button onclick="downloadFile('ee-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('ee-4th-year-subject-study-material.pdf')">Study Material</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Civil Engineering Section -->
+                <section id="civil-engineering" class="department-content">
+                    <label>Civil Engineering Department</label>
+                    <div class="year-selector">
+                        <h3>Select a Year</h3>
+                        <button onclick="showSubjects('ce-2nd-year')">2nd Year</button>
+                        <button onclick="showSubjects('ce-3rd-year')">3rd Year</button>
+                        <button onclick="showSubjects('ce-4th-year')">4th Year</button>
+                    </div>
+                    <div id="subjects-ce-2nd-year" class="subjects">
+                        <h3>2nd Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('ce-2nd-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="ce-2nd-year-subject" style="display:none;">
+                                <button onclick="downloadFile('ce-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('ce-2nd-year-subject-study-material.pdf')">Study Material</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subjects-ce-3rd-year" class="subjects">
+                        <h3>3rd Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('ce-3rd-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="ce-3rd-year-subject" style="display:none;">
+                                <button onclick="downloadFile('ce-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('ce-3rd-year-subject-study-material.pdf')">Study Material</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subjects-ce-4th-year" class="subjects">
+                        <h3>4th Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('ce-4th-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="ce-4th-year-subject" style="display:none;">
+                                <button onclick="downloadFile('ce-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('ce-4th-year-subject-study-material.pdf')">Study Material</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mechanical Engineering Section -->
+                <section id="mechanical-engineering" class="department-content">
+                    <label>Mechanical Engineering Department</label>
+                    <div class="year-selector">
+                        <h3>Select a Year</h3>
+                        <button onclick="showSubjects('me-2nd-year')">2nd Year</button>
+                        <button onclick="showSubjects('me-3rd-year')">3rd Year</button>
+                        <button onclick="showSubjects('me-4th-year')">4th Year</button>
+                    </div>
+                    <div id="subjects-me-2nd-year" class="subjects">
+                        <h3>2nd Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('me-2nd-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="me-2nd-year-subject" style="display:none;">
+                                <button>database-management System</button><br>
+                             <fieldset> <div id="subjects-cse-2nd-year" class="subjects"> <button onclick="downloadFile('me-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('me-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                             <button>Theory of Computation</button><br>
+                               <fieldset><button onclick="downloadFile('me-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('me-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                             <button>Data structure and statistics</button><br>
+                           <fieldset> <button onclick="downloadFile('me-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('me-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>Software Engineering</button><br>
+                            <fieldset> <button onclick="downloadFile('me-2nd-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('me-2nd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subjects-me-3rd-year" class="subjects">
+                        <h3>3rd Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('me-3rd-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="me-3rd-year-subject" style="display:none;">
+                                <button>database-management System</button><br>
+                                <fieldset><button onclick="downloadFile('me-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('me-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>Theory of Computation</button><br>
+                                <fieldset><button onclick="downloadFile('me-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('me-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            <button>Data structure and statistics</button><br>
+                            <fieldset>  <button onclick="downloadFile('me-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('me-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>Software Engineering</button><br>
+                            <fieldset> <button onclick="downloadFile('me-3rd-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('me-3rd-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subjects-me-4th-year" class="subjects">
+                        <h3>4th Year Subjects</h3>
+                        <div class="subject">
+                            <button onclick="showDetails('me-4th-year-subject')">Show Subject Details</button>
+                            <div class="subject-details" id="me-4th-year-subject" style="display:none;">
+                                <button>database-management System</button><br>
+                                <fieldset> <button onclick="downloadFile('me-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('me-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                               <button>Theory of Computation</button><br>
+                               <fieldset><button onclick="downloadFile('me-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('me-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            <button>Data structure and statistics</button><br>
+                            <fieldset> <button onclick="downloadFile('me-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button><br>
+                                <button onclick="downloadFile('me-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                                <button>Software Engineering</button><br>
+                            <fieldset> <button onclick="downloadFile('me-4th-year-subject-question-paper.pdf')">Previous Year Question Paper</button>
+                                <button onclick="downloadFile('me-4th-year-subject-study-material.pdf')">Study Material</button><br></fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Free Study Material for Engineers. All rights reserved.</p>
+    </footer>
+    <script>
+        function showDepartment(departmentId) {
+            const departments = document.querySelectorAll('.department-content');
+            departments.forEach(dep => {
+                if (dep.id === departmentId) {
+                    dep.style.display = 'block';
+                } else {
+                    dep.style.display = 'none';
+                }
+            });
+        }
+
+        function showSubjects(yearId) {
+            const subjects = document.querySelectorAll('.subjects');
+            subjects.forEach(subject => {
+                if (subject.id === `subjects-${yearId}`) {
+                    subject.style.display = 'block';
+                } else {
+                    subject.style.display = 'none';
+                }
+            });
+        }
+
+        function showDetails(subjectId) {
+            const details = document.getElementById(subjectId);
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+
+        function downloadFile(fileName) {
+            const link = document.createElement('a');
+            link.href = fileName;
+            link.download = fileName;
+            link.click();
+        }
+
+        function toggleMenu() {
+            const menuItems = document.querySelector('.menu-items');
+            menuItems.classList.toggle('active');
+        }
+
+        function shareOnWhatsApp() {
+            const text = encodeURIComponent("Check out this amazing Free Study Material app!");
+            window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+        }
+
+        function shareByEmail() {
+            const subject = encodeURIComponent("Check out this Free Study Material app!");
+            const body = encodeURIComponent("I found this Free Study Material app that might be useful for you. Check it out!");
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, yellow, white, yellow); /* Gradient background */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon {
+    font-size: 30px; /* Larger icon for mobile */
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column; /* Stack vertically on mobile */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #343a40;
+    width: 100%;
+    display: none; /* Hidden by default */
+}
+
+.menu-items a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.menu-items input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    max-width: 150px; /* Adjust as needed */
+    margin: 10px 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.container {
+    width: 100%;
+    max-width: 100%; /* Full width on mobile */
+    background: linear-gradient(to right, yellow, white, yellow);
+    padding: 10px; /* Reduced padding for better fit on mobile */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5em; /* Responsive font size */
+    color: brown;
+  background-color: linear-gradient(to right,yellow,white,yellow);;
+}
+
+.departments h2 {
+    font-size: 1.2em; /* Responsive font size */
+}
+
+.department-box {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.department-box button {
+    display: block;
+    width: 100%;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.department-box button:hover {
+    background-color: #0056b3;
+}
+
+.department-content {
+    display: none; /* Hidden by default */
+}
+
+.year-selector {
+    margin-bottom: 20px;
+}
+
+.year-selector button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.year-selector button:hover {
+    background-color: #218838;
+}
+
+.subjects {
+    margin-top: 20px;
+}
+
+.subject {
+    margin-bottom: 20px;
+}
+
+.subject h4 {
+    margin: 0;
+}
+
+button {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.subject-details {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .menu-items {
+        display: none; /* Hide menu items initially */
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* Position below menu icon */
+        left: 0;
+        background-color: #343a40;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .menu-items a,
+    .menu-items input[type="text"] {
+        margin: 10px 0;
+        text-align: center; /* Center align text in menu items */
+    }
+
+    .menu-icon.active + .menu-items {
+        display: flex; /* Show menu items when icon is active */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.2em; /* Adjust font size */
+    }
+
+    .departments h2 {
+        font-size: 1em; /* Adjust font size */
+    }
+
+    .menu-icon {
+        font-size: 28px; /* Adjust menu icon size for very small screens */
+    }
+}
+labal{
+  font-weight: bold;
+  color: brown;
+}
+title{
+    font-size: larger;
+    font-weight: bolder;
+    color: brown;
+    background-color: linear-gradient(to right,yellow,white,yellow);
+}
